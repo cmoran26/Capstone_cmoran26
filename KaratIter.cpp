@@ -10,7 +10,7 @@ using namespace chrono;
 constexpr auto BASE = 10;
 
 struct stackFrame {
-	long long X, Y, Xh, Xl, Yh, Yl, mult, M, z0, z1, z2, state, R;
+	long long X, Y, M, z0, z1, z2, state, R;
 };
 
 int getLength(long long num) {
@@ -22,8 +22,8 @@ int getLength(long long num) {
 	return length;
 }
 
-long long Karat(long A, long B) {
-	long long X, Y, Xh, Xl, Yh, Yl, mult, z0, z1, z2, R, state;
+long long Karat(long long A, long long B) {
+	long long X, Y, Xh, Xl, Yh, Yl, mult, z0, z1, z2, R;
 	int xLen, yLen;
 	double M;
 	vector<stackFrame> stack;
@@ -90,8 +90,8 @@ long long Karat(long A, long B) {
 }
 
 int main() {
-	long X = 123456789;
-	long Y = 123456789;
+	long long X = 12345;
+	long long Y = 6789;
 	auto start = high_resolution_clock::now();
 	cout << X << " * " << Y << " = " << Karat(X, Y) << endl;
 	auto end = high_resolution_clock::now();
