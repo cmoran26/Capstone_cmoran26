@@ -7,7 +7,6 @@
 
 using namespace std;
 using namespace chrono;
-constexpr auto BASE = 10;
 
 int getLength(long num) {
 	int length = 0;
